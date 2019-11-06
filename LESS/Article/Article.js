@@ -112,3 +112,55 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+//   function createPanel(data){
+//   const header = document.createElement('div');
+//   const menuButton = document.createElement('img');
+//   const h1 = document.createElement('h1');
+//   const articles = document.createElement('div'); 
+
+//     card,append(header);
+//     card.append(h1, menuButton);
+//     card.append(articles);
+
+//    card.classList.add('header');
+//    cardmenuButton.classList.add('menu-button');
+//    cardh1.classList.add('h1');
+//    cardarticles.classList.add('articles');
+
+//   cardImg.src = img;
+
+//   return card;
+//  }
+
+// data.forEach((card=> {
+//   container.append(createPanel(card.title, card.date, card.firstParagraph[0], card.secondParagraph[1], card.thirdParagraph[2]));
+// }))
+
+
+function createPanel(data) {
+  const articles = document.createElement('div');
+  // let d = []; //imagine array has all data 
+  const menuButton = document.createElement('img');
+  const h2 = document.createElement('h2');
+
+  articles.append(header);
+  articles.append(h2);
+  // articles.append(articles);
+
+  articles.classList.add('header');
+  articles.classList.add('.articles');
+  articles.classList.add('h2');
+
+  h2.textContent = data.title;
+
+  cardImg.src = img;
+
+  return articles;
+}
+
+data.forEach(card => {
+  const parent = document.querySelector('.articles');
+  parent.append(createPanel(card))
+});
+
+
